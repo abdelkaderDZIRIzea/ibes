@@ -1,0 +1,14 @@
+{
+  "name": "ibes-engineering-source",
+  "version": "32.83.0",
+  "private": true,
+  "description": "IBES engineering source and verification harness",
+  "scripts": {
+    "test:engineering": "node tests/electrical-calculation-engine.test.cjs && node tests/calculation-provenance.test.cjs && node tests/project-calculation-provenance.test.cjs && node tests/project-provenance-audit.test.cjs && node tests/electrical-calculation-boundaries.test.cjs && node tests/cable-assessment.test.cjs && node tests/short-circuit-assessment.test.cjs && node tests/circuit-safety-summary.test.cjs && node tests/project-circuit-safety.test.cjs && node tests/project-safety-view-model.test.cjs && node tests/project-safety-roundtrip.test.cjs && node tests/electrical-circuit-model.test.cjs && node tests/project-engineering-adapter.test.cjs && node tests/electrical-circuit-ui-contract.test.cjs && node tests/rule-registry.test.cjs && node tests/electrical-circuit-results.test.cjs && node tests/engineering-view-consistency.test.cjs && node tests/electrical-circuit-persistence.test.cjs && node tests/electrical-circuit-e2e-contract.test.cjs && node tests/desktop-local-store.test.cjs && node tests/desktop-main-store-wiring.test.cjs && node tests/desktop-main-integration.test.cjs",
+    "test:e2e": "node tests/electrical-circuit-e2e.playwright.cjs",
+    "setup:playwright": "npm install --no-audit --no-fund playwright && npx playwright install chromium"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  }
+}
